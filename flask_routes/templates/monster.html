@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{monster_name}}</title>
+</head>
+<body>
+    <h1>{{monster_name}}</h1>
+    <!-- this is a format called Jinja that Flask uses -->
+    <img src="{{url_for('static',filename=monster_name+'.jpg')}}" alt="pic of monster">
+    <h2>Monster Origins</h2>
+    <br><br>
+    <table border="1" width = "900">
+        <tr>
+            <th>Title</th>
+            <th>Fact</th>
+        </tr>
+        {% for i in facts %}
+        <tr>
+            <td>{{i.title}}</td>
+            <td>{{i.fact}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Home</a>
+</body>
+</html>
