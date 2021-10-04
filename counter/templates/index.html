@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+    <h1>COUNTER</h1>
+    <div id="count">{{count}}</div>
+<div id="forms">
+    <form  action='/addtwo'>
+        <input id="form1" type="submit"value="+2">
+    </form>
+
+    <form  action='/destroy'>
+        <input id="form2" type="submit" value="destroy">
+    </form>
+</div>
+</body>
+</html>
